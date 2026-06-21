@@ -378,7 +378,7 @@
             {
               "move_number": 43,
               "player": "W",
-              "move": "Nd3",
+              "move": "Ne3",
               "commentary": ""
             },
             {
@@ -390,7 +390,7 @@
             {
               "move_number": 44,
               "player": "W",
-              "move": "N1g2",
+              "move": "Nf3",
               "commentary": ""
             },
             {
@@ -420,19 +420,19 @@
             {
               "move_number": 46,
               "player": "B",
-              "move": "h4",
+              "move": "Bf6",
               "commentary": ""
             },
             {
               "move_number": 47,
               "player": "W",
-              "move": "Nxh4",
+              "move": "Nf1",
               "commentary": ""
             },
             {
               "move_number": 47,
               "player": "B",
-              "move": "Bxh4",
+              "move": "Bh4",
               "commentary": ""
             },
             {

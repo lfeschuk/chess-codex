@@ -327,10 +327,11 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
         }
       } else {
         const cleanInitial = initialMoves
-          .replace(/\d+\.+/g, '') // remove move numbers like 1. or 14...
           .replace(/\s+/g, ' ')
           .trim()
-          .split(' ');
+          .split(' ')
+          .map(token => token.replace(/^\d+[\s.]*/, '').trim()) // remove leading move numbers like "1." or "1" or "14..."
+          .filter(token => token !== '' && !/^\d+$/.test(token));
 
         for (const rawMove of cleanInitial) {
           if (!rawMove) continue;

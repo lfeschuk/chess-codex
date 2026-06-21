@@ -1,0 +1,96 @@
+{
+  "book_title": "Starting Out: The King's Indian",
+  "exercises": [
+    {
+      "id": "theory_petrosian_7_d5",
+      "title": "Theory: The Petrosian System (7 d5)",
+      "description": "The Petrosian System (starts on Book Page 16, runs through Page 17, and ends on Page 18 before Game 3).",
+      "imageFilename": "page_16.png",
+      "textContext": "Theory: The Petrosian System (7 d5)",
+      "preparsedJson": {
+        "game_id": "theory_petrosian_7_d5",
+        "white": "Theory",
+        "black": "Petrosian System",
+        "event": "Starting Out: The King's Indian",
+        "initial_moves": "1 d4 Nf6 2 c4 g6 3 Nc3 Bg7 4 e4 d6 5 Nf3 O-O 6 Be2 e5 7 d5",
+        "interactive_section": {
+          "starting_move": 7,
+          "moves": [
+            {
+              "move_number": 7,
+              "player": "B",
+              "move": "a5",
+              "commentary": "This is considered to be the most flexible response. Black plans to play ...Na6-c5 and doesn't want to be immediately kicked away by White playing b2-b4.\n\nNOTE: The idea of playing ...a5 to secure the c5-square for a black knight is seen throughout the book. This is one of Black's key strategical ideas in the King's Indian.\n\nThere are two other Black moves. 7...Nbd7 is the subject of Game 3 while 7...Na6 also gets a mention there."
+            },
+            {
+              "move_number": 8,
+              "player": "W",
+              "move": "Bg5",
+              "commentary": ""
+            },
+            {
+              "move_number": 8,
+              "player": "B",
+              "move": "h6",
+              "commentary": "This is sensible. It is useful for Black to have the possibility of breaking the pin with ...g6-g5, even if it is not always wise to employ it."
+            },
+            {
+              "move_number": 9,
+              "player": "W",
+              "move": "Bh4",
+              "commentary": ""
+            },
+            {
+              "move_number": 9,
+              "player": "B",
+              "move": "Na6",
+              "commentary": ""
+            },
+            {
+              "move_number": 10,
+              "player": "W",
+              "move": "Nd2",
+              "commentary": "Now White will be able to play f3 if his bishop gets in any danger."
+            },
+            {
+              "move_number": 10,
+              "player": "B",
+              "move": "Qe8",
+              "commentary": "Black breaks the pin without resorting to the positionally suspect move ...g6-g5. He plans to move his knight from f6 to h7 in order to create threats on the kingside. White's long term ambitions are on the queenside but he may have to play further consolidating moves on the kingside first. This strategically complex line is covered in Game 4."
+            }
+          ]
+        },
+        "sidelines": [
+          {
+            "id": "petrosian_7_nbd7",
+            "name": "Alternative 7...Nbd7",
+            "description": "Black plays 7...Nbd7 instead of 7...a5",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 7,
+                "player": "B",
+                "move": "Nbd7",
+                "commentary": "7...Nbd7 is the subject of Game 3."
+              }
+            ]
+          },
+          {
+            "id": "petrosian_7_na6",
+            "name": "Alternative 7...Na6",
+            "description": "Black plays 7...Na6 instead of 7...a5",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 7,
+                "player": "B",
+                "move": "Na6",
+                "commentary": "7...Na6 also gets a mention in Game 3."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

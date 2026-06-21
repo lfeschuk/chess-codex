@@ -1087,7 +1087,7 @@
         "white": "Gyimesi",
         "black": "Cvitan",
         "event": "Chiasso 1994",
-        "initial_moves": "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. Ne1 Nd7 10. Nd3 f5 11. Bd2 f4 12. f3 g5 13. g4",
+        "initial_moves": "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. Ne1 Nd7 10. Nd3 f5 11. Bd2 Nf6 12. f3 f4 13. g4",
         "interactive_section": {
           "starting_move": 13,
           "moves": [
@@ -1167,7 +1167,7 @@
               "move_number": 19,
               "player": "B",
               "move": "Qf8!",
-              "commentary": ""
+              "commentary": "A good multi-purpose move. The two most important points are that it frees d8 for the black bishop (remember Game 12) and creates x-ray pressure down the f-file. For example, if White now carelessly moved his queen Black would be able to sacrifice a piece on g4 and regain it with ...f4-f3+. Additional points to ...Qf8 are that it keeps the c5-pawn under pressure and also brings the queen nearer to the h-file (...Qh6)."
             },
             {
               "move_number": 20,
@@ -1286,62 +1286,62 @@
             {
               "move_number": 29,
               "player": "B",
-              "move": "Rxa7",
+              "move": "Nh4+",
               "commentary": ""
             },
             {
               "move_number": 30,
-              "player": "W",
-              "move": "Bxa7",
-              "commentary": ""
-            },
-            {
-              "move_number": 30,
-              "player": "B",
-              "move": "Nh4+!",
-              "commentary": ""
-            },
-            {
-              "move_number": 31,
               "player": "W",
               "move": "Kg1",
               "commentary": ""
             },
             {
+              "move_number": 30,
+              "player": "B",
+              "move": "Rxa7",
+              "commentary": ""
+            },
+            {
+              "move_number": 31,
+              "player": "W",
+              "move": "Bxa7",
+              "commentary": ""
+            },
+            {
               "move_number": 31,
               "player": "B",
-              "move": "Nxa4!",
+              "move": "hxg4",
               "commentary": ""
             },
             {
               "move_number": 32,
               "player": "W",
-              "move": "Nxa4",
+              "move": "hxg4",
               "commentary": ""
             },
             {
               "move_number": 32,
               "player": "B",
-              "move": "Rxa4",
+              "move": "Bxg4!",
               "commentary": ""
             },
             {
               "move_number": 33,
               "player": "W",
-              "move": "Rxa4",
+              "move": "fxg4",
               "commentary": ""
             },
             {
               "move_number": 33,
               "player": "B",
-              "move": "Qe8",
-              "commentary": "[Assumed move to maintain numbering]"
+              "move": "f3",
+              "commentary": ""
             },
             {
               "move_number": 34,
               "player": "W",
-              "move": "Ra1",
-              "commentary": "[Assumed move to maintain numbering]"
+              "move": "Rxf3",
+              "commentary": ""
             },
             {
               "move_number": 34,

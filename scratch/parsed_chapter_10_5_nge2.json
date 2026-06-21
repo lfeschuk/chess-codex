@@ -1,0 +1,175 @@
+{
+  "book_title": "Starting Out: The King's Indian",
+  "exercises": [
+    {
+      "id": "theory_5_nge2",
+      "title": "Theory: 5 Nge2 (The Hungarian System)",
+      "description": "5 Nge2 (The Hungarian System) (starts on Book Page 167, runs through Page 168 before Game 65).",
+      "imageFilename": "page_167.png",
+      "textContext": "Theory: 5 Nge2 (The Hungarian System)",
+      "preparsedJson": {
+        "game_id": "theory_5_nge2",
+        "white": "Theory",
+        "black": "5 Nge2 (The Hungarian System)",
+        "initial_moves": "1 d4 Nf6 2 c4 g6 3 Nc3 Bg7 4 e4 d6 5 Nge2",
+        "interactive_section": {
+          "starting_move": 5,
+          "moves": [
+            {
+              "move_number": 5,
+              "player": "B",
+              "move": "O-O",
+              "commentary": "This system was developed by Hungarian players in the 1960's and whilst it has never had a big following it remains quite a tricky system for Black to face.\n\nWhite's strategy: To spend a couple of tempi manoeuvring the knight to g3 may seem like rather strange behaviour but from there it exerts influence over the c4- and f5-squares so it is not easy for Black to play on the kingside. That is perhaps the sophisticated part of White's strategy. The crude part is actually what most White players are interested in. They are going to play h2-h4-h5 and try and attack on the kingside. If Black blocks the h-pawn with ...h7-h5, they play Bg5 and try and make the sacrifice Bxh5 work.\n\nBlack's strategy: Because of the potential dangers for Black on the kingside there are quite a few players who prefer to delay castling and immediately start operations on the queenside with ...a7-a6, ...c7-c6 and ...b7-b5. If Black also refrains from playing ...e7-e5, which he usually does, he must be careful that White can't break through in the centre with e4-e5. An alternative is just to play the normal King's Indian moves (...O-O, ...e7-e5) and let White do his worst."
+            },
+            {
+              "move_number": 6,
+              "player": "W",
+              "move": "Ng3",
+              "commentary": ""
+            },
+            {
+              "move_number": 6,
+              "player": "B",
+              "move": "e5",
+              "commentary": ""
+            },
+            {
+              "move_number": 7,
+              "player": "W",
+              "move": "d5",
+              "commentary": ""
+            },
+            {
+              "move_number": 7,
+              "player": "B",
+              "move": "a5",
+              "commentary": ""
+            },
+            {
+              "move_number": 8,
+              "player": "W",
+              "move": "Be2",
+              "commentary": "Game 65 features the immediate 8 h4."
+            },
+            {
+              "move_number": 8,
+              "player": "B",
+              "move": "Na6",
+              "commentary": ""
+            },
+            {
+              "move_number": 9,
+              "player": "W",
+              "move": "h4",
+              "commentary": ""
+            },
+            {
+              "move_number": 9,
+              "player": "B",
+              "move": "c6",
+              "commentary": "9...h5 is playable as long as after 10 Bg5 Black breaks the pin at once with 10...Qe8."
+            },
+            {
+              "move_number": 10,
+              "player": "W",
+              "move": "h5",
+              "commentary": ""
+            },
+            {
+              "move_number": 10,
+              "player": "B",
+              "move": "Nc5",
+              "commentary": ""
+            },
+            {
+              "move_number": 11,
+              "player": "W",
+              "move": "Be3",
+              "commentary": "If White ever plays hxg6 then Black usually recaptures with the f-pawn."
+            },
+            {
+              "move_number": 11,
+              "player": "B",
+              "move": "cxd5",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "W",
+              "move": "cxd5",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "B",
+              "move": "Qb6",
+              "commentary": "The chances are about level."
+            }
+          ]
+        },
+        "sidelines": [
+          {
+            "id": "5_nge2_8_h4",
+            "name": "Alternative 8 h4",
+            "description": "White plays 8 h4 instead of 8 Be2",
+            "startingMoveIndex": 4,
+            "moves": [
+              {
+                "move_number": 8,
+                "player": "W",
+                "move": "h4",
+                "commentary": "Game 65 features the immediate 8 h4."
+              },
+              {
+                "move_number": 8,
+                "player": "B",
+                "move": "h5",
+                "commentary": ""
+              }
+            ]
+          },
+          {
+            "id": "5_nge2_9_h5",
+            "name": "Alternative 9...h5",
+            "description": "Black plays 9...h5 instead of 9...c6",
+            "startingMoveIndex": 7,
+            "moves": [
+              {
+                "move_number": 9,
+                "player": "B",
+                "move": "h5",
+                "commentary": "9...h5 is playable as long as after 10 Bg5 Black breaks the pin at once with 10...Qe8. Black can follow up with ...Nh7 and, after some preparation, ...f7-f5."
+              },
+              {
+                "move_number": 10,
+                "player": "W",
+                "move": "Bg5",
+                "commentary": ""
+              },
+              {
+                "move_number": 10,
+                "player": "B",
+                "move": "Qe8",
+                "commentary": ""
+              }
+            ]
+          },
+          {
+            "id": "5_nge2_5_a6",
+            "name": "Alternative 5...a6",
+            "description": "Black plays 5...a6 instead of 5...O-O",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 5,
+                "player": "B",
+                "move": "a6",
+                "commentary": "Game 66 features the plan with Black advancing quickly on the queenside. Black can play either 5...a6 or 5...c6 but he must bear in mind that White still has the possibility of playing a Samisch with 6 f3. In my opinion 5...a6 is the more flexible choice."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

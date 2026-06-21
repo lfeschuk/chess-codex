@@ -1045,6 +1045,74 @@
                 "commentary": "Black breaks the pin without resorting to the positionally suspect move ...g6-g5. He plans to move his knight from f6 to h7 in order to create threats on the kingside. White's long term ambitions are on the queenside but he may have to play further consolidating moves on the kingside first. This strategically complex line is covered in Game 4."
               }
             ]
+          },
+          {
+            "id": "game_3_sideline_11_nf4",
+            "name": "Alternative 11...Nf4",
+            "description": "Black plays 11...Nf4 instead of 11...Nxg3",
+            "startingMoveIndex": 7,
+            "moves": [
+              {
+                "move_number": 11,
+                "player": "B",
+                "move": "Nf4",
+                "commentary": ""
+              },
+              {
+                "move_number": 12,
+                "player": "W",
+                "move": "hxg5",
+                "commentary": ""
+              },
+              {
+                "move_number": 12,
+                "player": "B",
+                "move": "hxg5",
+                "commentary": ""
+              },
+              {
+                "move_number": 13,
+                "player": "W",
+                "move": "Qc2!",
+                "commentary": ""
+              },
+              {
+                "move_number": 13,
+                "player": "B",
+                "move": "Nxg2+",
+                "commentary": ""
+              },
+              {
+                "move_number": 14,
+                "player": "W",
+                "move": "Kf1",
+                "commentary": ""
+              },
+              {
+                "move_number": 14,
+                "player": "B",
+                "move": "Nf4",
+                "commentary": ""
+              },
+              {
+                "move_number": 15,
+                "player": "W",
+                "move": "Bxf4",
+                "commentary": ""
+              },
+              {
+                "move_number": 15,
+                "player": "B",
+                "move": "gxf4",
+                "commentary": "15...exf4 16 e5! threatens Qh7 mate"
+              },
+              {
+                "move_number": 16,
+                "player": "W",
+                "move": "Kg2!",
+                "commentary": "when White follows up with Rag1 and king back to f1. He has dangerous attacking chances on the kingside."
+              }
+            ]
           }
         ]
       }

@@ -1,0 +1,157 @@
+{
+  "book_title": "Starting Out: The King's Indian",
+  "exercises": [
+    {
+      "id": "theory_old_7_nbd7",
+      "title": "Theory: The Old 7...Nbd7",
+      "description": "The Old 7...Nbd7 variation (starts on Book Page 33, runs through Page 34 before Game 8).",
+      "imageFilename": "page_33.png",
+      "textContext": "Theory: The Old 7...Nbd7",
+      "preparsedJson": {
+        "game_id": "theory_old_7_nbd7",
+        "white": "Theory",
+        "black": "The Old 7...Nbd7",
+        "initial_moves": "1 d4 Nf6 2 c4 g6 3 Nc3 Bg7 4 e4 d6 5 Nf3 O-O 6 Be2 e5 7 O-O Nbd7",
+        "interactive_section": {
+          "starting_move": 8,
+          "moves": [
+            {
+              "move_number": 8,
+              "player": "W",
+              "move": "Be3",
+              "commentary": "This is the line that is causing the most trouble for Black. White has tried a whole host of other moves. In Game 9 we shall examine 8 Qc2 while 8 d5 Nc5 is a system that can arise from several variations. It was briefly considered in Game 3."
+            },
+            {
+              "move_number": 8,
+              "player": "B",
+              "move": "c6",
+              "commentary": "Again Black has a wide choice. The most interesting is 8...Ng4 with similar play to the 7 Be3 line in the last chapter. However, the fact that Black has already committed himself to ...Nbd7 means that he has an inferior version."
+            },
+            {
+              "move_number": 9,
+              "player": "W",
+              "move": "d5",
+              "commentary": "It is more inviting for White to block the centre once Black has played ...c7-c6."
+            },
+            {
+              "move_number": 9,
+              "player": "B",
+              "move": "c5",
+              "commentary": ""
+            },
+            {
+              "move_number": 10,
+              "player": "W",
+              "move": "Ne1",
+              "commentary": ""
+            },
+            {
+              "move_number": 10,
+              "player": "B",
+              "move": "Ne8",
+              "commentary": "Black prepares the traditional ...f7-f5."
+            },
+            {
+              "move_number": 11,
+              "player": "W",
+              "move": "g4",
+              "commentary": "The best move. It doesn't stop ...f7-f5 but ensures that the g-file will open after Black has played it. As we shall see in game 10 White is the one who is able to make use of this dangerous file."
+            }
+          ]
+        },
+        "sidelines": [
+          {
+            "id": "old_7_nbd7_8_ng4",
+            "name": "Alternative 8...Ng4",
+            "description": "Black plays 8...Ng4 instead of 8...c6",
+            "startingMoveIndex": 0,
+            "moves": [
+              {
+                "move_number": 8,
+                "player": "B",
+                "move": "Ng4",
+                "commentary": "A possible continuation is 9 Bg5 f6 10 Bc1 c6 11 h3 Nh6 12 Be3 with a better game for White."
+              },
+              {
+                "move_number": 9,
+                "player": "W",
+                "move": "Bg5",
+                "commentary": ""
+              },
+              {
+                "move_number": 9,
+                "player": "B",
+                "move": "f6",
+                "commentary": ""
+              },
+              {
+                "move_number": 10,
+                "player": "W",
+                "move": "Bc1",
+                "commentary": ""
+              },
+              {
+                "move_number": 10,
+                "player": "B",
+                "move": "c6",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "W",
+                "move": "h3",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "B",
+                "move": "Nh6",
+                "commentary": ""
+              },
+              {
+                "move_number": 12,
+                "player": "W",
+                "move": "Be3",
+                "commentary": ""
+              }
+            ]
+          },
+          {
+            "id": "old_7_nbd7_8_qc2",
+            "name": "Alternative 8 Qc2",
+            "description": "White plays 8 Qc2 instead of 8 Be3",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 8,
+                "player": "W",
+                "move": "Qc2",
+                "commentary": "In Game 9 we shall examine 8 Qc2."
+              }
+            ]
+          },
+          {
+            "id": "old_7_nbd7_8_d5",
+            "name": "Alternative 8 d5",
+            "description": "White plays 8 d5 instead of 8 Be3",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 8,
+                "player": "W",
+                "move": "d5",
+                "commentary": "8 d5 Nc5 is a system that can arise from several variations. It was briefly considered in Game 3."
+              },
+              {
+                "move_number": 8,
+                "player": "B",
+                "move": "Nc5",
+                "commentary": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

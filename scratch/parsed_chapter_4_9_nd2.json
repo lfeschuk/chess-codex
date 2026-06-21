@@ -1,0 +1,199 @@
+{
+  "book_title": "Starting Out: The King's Indian",
+  "exercises": [
+    {
+      "id": "theory_9_nd2",
+      "title": "Theory: White Plays 9 Nd2",
+      "description": "White Plays 9 Nd2 (starts on Book Page 71, runs through Page 73 before Game 26).",
+      "imageFilename": "page_71.png",
+      "textContext": "Theory: White Plays 9 Nd2",
+      "preparsedJson": {
+        "game_id": "theory_9_nd2",
+        "white": "Theory",
+        "black": "White Plays 9 Nd2",
+        "initial_moves": "1 d4 Nf6 2 c4 g6 3 Nc3 Bg7 4 e4 d6 5 Nf3 O-O 6 Be2 e5 7 O-O Nc6 8 d5 Ne7 9 Nd2",
+        "interactive_section": {
+          "starting_move": 9,
+          "moves": [
+            {
+              "move_number": 9,
+              "player": "B",
+              "move": "a5",
+              "commentary": "Until 9 b4 took over in the mid-1990's this had become the most popular variation in the Classical King's Indian. Most of the world's top players took one side or another in a long running theoretical debate. Then, almost overnight, it all went quiet. That doesn't mean it won't be back so it remains an extremely important variation.\n\nBlack has another way to slow White down on the queenside. 9...a5! The point is that after White plays a3 he is still in no position to play b2-b4 because of the pin on the a-file. Therefore he needs another move (usually Rb1) in order to be able to play b2-b4. Playing ...a7-a5, therefore, saves Black a tempo."
+            },
+            {
+              "move_number": 10,
+              "player": "W",
+              "move": "a3",
+              "commentary": ""
+            },
+            {
+              "move_number": 10,
+              "player": "B",
+              "move": "Nd7",
+              "commentary": "Black retreats his knight in order to play ...f7-f5, and chooses the d7-square (as opposed to e8) in order to hold up c4-c5 as long as possible."
+            },
+            {
+              "move_number": 11,
+              "player": "W",
+              "move": "Rb1",
+              "commentary": ""
+            },
+            {
+              "move_number": 11,
+              "player": "B",
+              "move": "f5",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "W",
+              "move": "b4",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "B",
+              "move": "Kh8",
+              "commentary": "A semi-waiting move that has displaced all other moves. How did Black arrive at such a decision? Well, the two most obvious moves, 12...f4 and 12...Nf6 both have their drawbacks. Black doesn't want to move his knight from d7 just yet as it is holding up c4-c5 and 12...f4 allows White to play 13 Bg4. Therefore, by a process of elimination Black arrives at 12...Kh8. Of course this is not just a waiting move. Black now has the g8-square available for manoeuvres such as ...Ng8-f6 and the king is safer in the corner, especially if ...c7-c6 is played."
+            },
+            {
+              "move_number": 13,
+              "player": "W",
+              "move": "f3",
+              "commentary": ""
+            },
+            {
+              "move_number": 13,
+              "player": "B",
+              "move": "f4",
+              "commentary": "Black declares his hand. He is going to pawn storm on the kingside. This most complex position is the subject of Game 28."
+            }
+          ]
+        },
+        "sidelines": [
+          {
+            "id": "9_nd2_9_c5",
+            "name": "Alternative 9...c5",
+            "description": "Black plays 9...c5 instead of 9...a5",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 9,
+                "player": "B",
+                "move": "c5",
+                "commentary": "The most radical way to prevent White from playing c4-c5 is for Black to play it himself. However, after 9...c5 White has new targets on the queenside and by playing Rb1 and b4 he is able to develop the initiative."
+              },
+              {
+                "move_number": 10,
+                "player": "W",
+                "move": "Rb1",
+                "commentary": "10 dxc6 bxc6 11 b4 is another possibility."
+              },
+              {
+                "move_number": 10,
+                "player": "B",
+                "move": "Ne8",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "W",
+                "move": "b4",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "B",
+                "move": "b6",
+                "commentary": ""
+              },
+              {
+                "move_number": 12,
+                "player": "W",
+                "move": "bxc5",
+                "commentary": ""
+              },
+              {
+                "move_number": 12,
+                "player": "B",
+                "move": "bxc5",
+                "commentary": ""
+              },
+              {
+                "move_number": 13,
+                "player": "W",
+                "move": "Nb3",
+                "commentary": ""
+              },
+              {
+                "move_number": 13,
+                "player": "B",
+                "move": "f5",
+                "commentary": ""
+              },
+              {
+                "move_number": 14,
+                "player": "W",
+                "move": "Bg5",
+                "commentary": ""
+              }
+            ]
+          },
+          {
+            "id": "9_nd2_10_bd7",
+            "name": "Alternative 10...Bd7",
+            "description": "Black plays 10...Bd7 instead of 10...Nd7",
+            "startingMoveIndex": 1,
+            "moves": [
+              {
+                "move_number": 10,
+                "player": "B",
+                "move": "Bd7",
+                "commentary": "Black has an interesting alternative in 10...Bd7 (considered in Game 27). This slows White down even more on the queenside as 11 Rb1 can be met by 11...a4."
+              }
+            ]
+          },
+          {
+            "id": "9_nd2_13_qc2",
+            "name": "Alternative 13 Qc2",
+            "description": "White plays 13 Qc2 instead of 13 f3",
+            "startingMoveIndex": 6,
+            "moves": [
+              {
+                "move_number": 13,
+                "player": "W",
+                "move": "Qc2",
+                "commentary": "An important alternative is 13 Qc2 which has occurred in literally hundreds of games. Play usually continues 13...Nf6 14 f3 axb4 15 axb4 when Black has two strategies. He can either start his kingside attack by 15...f4 or 15...g5, or he can increase the central tension with 15...c6. The latter is a speciality of the Russian grandmaster Dolmatov and he has scored well with it."
+              },
+              {
+                "move_number": 13,
+                "player": "B",
+                "move": "Nf6",
+                "commentary": ""
+              },
+              {
+                "move_number": 14,
+                "player": "W",
+                "move": "f3",
+                "commentary": ""
+              },
+              {
+                "move_number": 14,
+                "player": "B",
+                "move": "axb4",
+                "commentary": ""
+              },
+              {
+                "move_number": 15,
+                "player": "W",
+                "move": "axb4",
+                "commentary": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

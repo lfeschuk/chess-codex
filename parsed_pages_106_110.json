@@ -11,14 +11,14 @@
         "white": "Hohler",
         "black": "Gallagher",
         "event": "Bern",
-        "initial_moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nbd7 Nc3 e5 e4 exd4 Nxd4 Re8 h3 a6 Re1 Rb8 Be3",
+        "initial_moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nbd7 Nc3 e5 e4 exd4 Nxd4 Re8 h3 a6 Rb1 Rb8 Be3",
         "interactive_section": {
           "starting_move": 12,
           "moves": [
             {
               "move_number": 12,
               "player": "B",
-              "move": "c6",
+              "move": "c5",
               "commentary": "Black prepares ...b5 to challenge White's queenside."
             },
             {
@@ -120,7 +120,7 @@
             {
               "move_number": 21,
               "player": "W",
-              "move": "Rae1",
+              "move": "Rfe1",
               "commentary": "White tries to defend the pinned knight."
             },
             {
@@ -156,7 +156,7 @@
             {
               "move_number": 24,
               "player": "W",
-              "move": "Rad1",
+              "move": "Rbd1",
               "commentary": "White develops the rook."
             },
             {
@@ -168,7 +168,7 @@
             {
               "move_number": 25,
               "player": "W",
-              "move": "Bd3",
+              "move": "Bd5",
               "commentary": "White develops the bishop."
             },
             {
@@ -186,7 +186,7 @@
             {
               "move_number": 26,
               "player": "B",
-              "move": "Re4",
+              "move": "R6e4",
               "commentary": "Black rook activates on e4."
             },
             {
@@ -380,7 +380,7 @@
             {
               "move_number": 13,
               "player": "W",
-              "move": "Nde2",
+              "move": "Nc2",
               "commentary": "White retreats the knight, defending the rook on a1 dynamically."
             },
             {
@@ -446,7 +446,7 @@
             {
               "move_number": 18,
               "player": "B",
-              "move": "Qe7",
+              "move": "Qa5",
               "commentary": "Black coordinates queen and rooks."
             },
             {
@@ -578,7 +578,7 @@
             {
               "move_number": 29,
               "player": "B",
-              "move": "Qa7",
+              "move": "Qa6",
               "commentary": "Black queen joins the attack."
             },
             {

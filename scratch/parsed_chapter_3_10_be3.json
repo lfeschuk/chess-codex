@@ -1,0 +1,53 @@
+{
+  "book_title": "Starting Out: The King's Indian",
+  "exercises": [
+    {
+      "id": "theory_10_be3",
+      "title": "Theory: White Plays 10 Be3",
+      "description": "White Plays 10 Be3 (Book Page 52, introduces the main tabiya before Game 16).",
+      "imageFilename": "page_52.png",
+      "textContext": "Theory: White Plays 10 Be3",
+      "preparsedJson": {
+        "game_id": "theory_10_be3",
+        "white": "Theory",
+        "black": "White Plays 10 Be3",
+        "initial_moves": "1 d4 Nf6 2 c4 g6 3 Nc3 Bg7 4 e4 d6 5 Nf3 O-O 6 Be2 e5 7 O-O Nc6 8 d5 Ne7 9 Ne1 Nd7 10 Be3",
+        "interactive_section": {
+          "starting_move": 10,
+          "moves": [
+            {
+              "move_number": 10,
+              "player": "B",
+              "move": "f5",
+              "commentary": "The moves 10...f5 11 f3 f4 12 Bf2 g5 (Diagram 12) are now almost universally played so we will take this as our starting position. This variation represents the King's Indian in its purest form. White will attempt to tear Black limb from limb on the queenside while Black will endeavour to hang, draw and quarter White on the kingside. Sometimes both players succeed and then Black wins. That is the advantage of attacking the king."
+            },
+            {
+              "move_number": 11,
+              "player": "W",
+              "move": "f3",
+              "commentary": ""
+            },
+            {
+              "move_number": 11,
+              "player": "B",
+              "move": "f4",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "W",
+              "move": "Bf2",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "B",
+              "move": "g5",
+              "commentary": ""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

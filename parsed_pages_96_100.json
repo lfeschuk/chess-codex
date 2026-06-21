@@ -1291,6 +1291,52 @@
                 "commentary": ""
               }
             ]
+          },
+          {
+            "id": "game_37_side_15_qxb2",
+            "name": "Alternative 15 Qxb2",
+            "description": "White plays 15 Qxb2 instead of 15 Rb1.",
+            "startingMoveIndex": 11,
+            "moves": [
+              {
+                "move_number": 15,
+                "player": "W",
+                "move": "Qxb2",
+                "commentary": "White takes the bishop on b2."
+              },
+              {
+                "move_number": 15,
+                "player": "B",
+                "move": "Qh4+",
+                "commentary": "Forking the king and the bishop on h6."
+              },
+              {
+                "move_number": 16,
+                "player": "W",
+                "move": "g3",
+                "commentary": ""
+              },
+              {
+                "move_number": 16,
+                "player": "B",
+                "move": "Qxh6",
+                "commentary": "Black regains the piece with equal material."
+              }
+            ]
+          },
+          {
+            "id": "game_37_side_27_qh4",
+            "name": "Alternative 27...Qh4",
+            "description": "Black plays 27...Qh4 immediately instead of 27...Qh8.",
+            "startingMoveIndex": 36,
+            "moves": [
+              {
+                "move_number": 27,
+                "player": "B",
+                "move": "Qh4",
+                "commentary": "Black plays the queen to h4 directly, which seems more natural."
+              }
+            ]
           }
         ]
       }

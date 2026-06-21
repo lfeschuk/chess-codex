@@ -509,7 +509,7 @@
               {
                 "move_number": 13,
                 "player": "W",
-                "move": "Nxd4",
+                "move": "Nbxd4",
                 "commentary": ""
               },
               {
@@ -524,7 +524,7 @@
             "id": "game_9_sideline_17_exf5",
             "name": "Alternative 17 exf5",
             "description": "White plays 17 exf5 instead of 17 f3",
-            "startingMoveIndex": 17,
+            "startingMoveIndex": 16,
             "moves": [
               {
                 "move_number": 17,
@@ -535,7 +535,7 @@
               {
                 "move_number": 17,
                 "player": "B",
-                "move": "Bxd3",
+                "move": "Nxd3",
                 "commentary": ""
               },
               {
@@ -837,13 +837,7 @@
               "move_number": 33,
               "player": "W",
               "move": "Bxf8",
-              "commentary": ""
-            },
-            {
-              "move_number": 33,
-              "player": "B",
-              "move": "Black resigns",
-              "commentary": ""
+              "commentary": "Black resigns."
             }
           ]
         },
@@ -993,7 +987,7 @@
               "move_number": 10,
               "player": "B",
               "move": "Nh5",
-              "commentary": ""
+              "commentary": "The only way to create play. Black now has ideas of ...f7-f5 and ...Nf4."
             },
             {
               "move_number": 11,
@@ -1005,7 +999,7 @@
               "move_number": 11,
               "player": "B",
               "move": "f5",
-              "commentary": "The only way to create play. Black now has ideas of ...f7-f5 and ...Nf4."
+              "commentary": ""
             },
             {
               "move_number": 12,
@@ -1152,7 +1146,7 @@
             "id": "game_11_sideline_15_qxc3",
             "name": "Alternative 15 Qxc3",
             "description": "White plays 15 Qxc3 instead of 15 bxc3",
-            "startingMoveIndex": 9,
+            "startingMoveIndex": 8,
             "moves": [
               {
                 "move_number": 15,

@@ -247,7 +247,7 @@
         "white": "Beliavsky",
         "black": "Solak",
         "event": "Europe Championship, Saint Vincent 2000",
-        "initial_moves": "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. Nd2 Nd7",
+        "initial_moves": "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. Nd2 Ne8",
         "interactive_section": {
           "starting_move": 10,
           "moves": [
@@ -530,7 +530,7 @@
             {
               "move_number": 33,
               "player": "W",
-              "move": "fxg4",
+              "move": "hxg4",
               "commentary": ""
             },
             {
@@ -784,13 +784,13 @@
             {
               "move_number": 13,
               "player": "B",
-              "move": "cxb5",
+              "move": "cxd5",
               "commentary": ""
             },
             {
               "move_number": 14,
               "player": "W",
-              "move": "cxb5",
+              "move": "cxd5",
               "commentary": ""
             },
             {

@@ -1,0 +1,336 @@
+{
+  "book_title": "Starting Out: The King's Indian",
+  "exercises": [
+    {
+      "id": "theory_gligoric_7_be3",
+      "title": "Theory: The Gligoric System (7 Be3)",
+      "description": "The Gligoric System (starts on Book Page 21, runs through Page 22, and ends on Page 23 before Game 5).",
+      "imageFilename": "page_21.png",
+      "textContext": "Theory: The Gligoric System (7 Be3)",
+      "preparsedJson": {
+        "game_id": "theory_gligoric_7_be3",
+        "white": "Theory",
+        "black": "Gligoric System",
+        "event": "Starting Out: The King's Indian",
+        "initial_moves": "1 d4 Nf6 2 c4 g6 3 Nc3 Bg7 4 e4 d6 5 Nf3 O-O 6 Be2 e5 7 Be3",
+        "interactive_section": {
+          "starting_move": 7,
+          "moves": [
+            {
+              "move_number": 7,
+              "player": "B",
+              "move": "Ng4",
+              "commentary": "Black accepts the challenge White has offered. There are a number of important alternatives:"
+            },
+            {
+              "move_number": 8,
+              "player": "W",
+              "move": "Bg5",
+              "commentary": ""
+            },
+            {
+              "move_number": 8,
+              "player": "B",
+              "move": "f6",
+              "commentary": "Now White's bishop has to move again but Black's knight on g4 is also awkwardly placed."
+            },
+            {
+              "move_number": 9,
+              "player": "W",
+              "move": "Bh4",
+              "commentary": "The most common. The bishop remains on the kingside and will be looking to eventually settle on f2 (after moves like Nd2 and f3). Some players prefer to go home with the bishop. 9 Bc1 is seen in Game 6."
+            },
+            {
+              "move_number": 9,
+              "player": "B",
+              "move": "Nc6",
+              "commentary": ""
+            },
+            {
+              "move_number": 10,
+              "player": "W",
+              "move": "d5",
+              "commentary": ""
+            },
+            {
+              "move_number": 10,
+              "player": "B",
+              "move": "Ne7",
+              "commentary": ""
+            },
+            {
+              "move_number": 11,
+              "player": "W",
+              "move": "Nd2",
+              "commentary": ""
+            },
+            {
+              "move_number": 11,
+              "player": "B",
+              "move": "Nh6",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "W",
+              "move": "f3",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "B",
+              "move": "g5",
+              "commentary": ""
+            },
+            {
+              "move_number": 13,
+              "player": "W",
+              "move": "Bf2",
+              "commentary": ""
+            },
+            {
+              "move_number": 13,
+              "player": "B",
+              "move": "f5",
+              "commentary": "This very double-edged position is the subject of Game 5."
+            }
+          ]
+        },
+        "sidelines": [
+          {
+            "id": "gligoric_7_na6",
+            "name": "Alternative 7...Na6",
+            "description": "Black plays 7...Na6 instead of 7...Ng4",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 7,
+                "player": "B",
+                "move": "Na6",
+                "commentary": "transposes to Chapter 2. This is a perfectly reasonable way for Black to play if that line is in his repertoire."
+              },
+              {
+                "move_number": 8,
+                "player": "W",
+                "move": "O-O",
+                "commentary": ""
+              }
+            ]
+          },
+          {
+            "id": "gligoric_7_h6",
+            "name": "Alternative 7...h6!?",
+            "description": "Black plays 7...h6!? instead of 7...Ng4",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 7,
+                "player": "B",
+                "move": "h6",
+                "commentary": "is a favourite of John Nunn who raised its profile by using it in against top class opposition. The idea is to play ...Ng4 but without allowing White to play Bg5."
+              },
+              {
+                "move_number": 8,
+                "player": "W",
+                "move": "O-O",
+                "commentary": ""
+              },
+              {
+                "move_number": 8,
+                "player": "B",
+                "move": "Ng4",
+                "commentary": ""
+              },
+              {
+                "move_number": 9,
+                "player": "W",
+                "move": "Bc1",
+                "commentary": ""
+              },
+              {
+                "move_number": 9,
+                "player": "B",
+                "move": "Nc6",
+                "commentary": ""
+              },
+              {
+                "move_number": 10,
+                "player": "W",
+                "move": "d5",
+                "commentary": ""
+              },
+              {
+                "move_number": 10,
+                "player": "B",
+                "move": "Ne7",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "W",
+                "move": "Ne1",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "B",
+                "move": "f5",
+                "commentary": ""
+              },
+              {
+                "move_number": 12,
+                "player": "W",
+                "move": "Bxg4",
+                "commentary": ""
+              },
+              {
+                "move_number": 12,
+                "player": "B",
+                "move": "fxg4",
+                "commentary": "with a most unusual kingside pawn structure. Black will now play ...g6-g5 and ...Ng6-f4 while White will seek his fortune on the queenside. Most theoretical sources agree that White has slightly the better chances."
+              }
+            ]
+          },
+          {
+            "id": "gligoric_7_exd4",
+            "name": "Alternative 7...exd4",
+            "description": "Black plays 7...exd4 instead of 7...Ng4",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 7,
+                "player": "B",
+                "move": "exd4",
+                "commentary": "is not such a bad move as Black is often able to create counterplay by a quick ...c7-c6 and ...d6-d5."
+              },
+              {
+                "move_number": 8,
+                "player": "W",
+                "move": "Nxd4",
+                "commentary": ""
+              },
+              {
+                "move_number": 8,
+                "player": "B",
+                "move": "Re8",
+                "commentary": ""
+              },
+              {
+                "move_number": 9,
+                "player": "W",
+                "move": "f3",
+                "commentary": ""
+              },
+              {
+                "move_number": 9,
+                "player": "B",
+                "move": "c6",
+                "commentary": ""
+              },
+              {
+                "move_number": 10,
+                "player": "W",
+                "move": "Qd2",
+                "commentary": "(10 Bf2!?)"
+              },
+              {
+                "move_number": 10,
+                "player": "B",
+                "move": "d5",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "W",
+                "move": "exd5",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "B",
+                "move": "cxd5",
+                "commentary": ""
+              },
+              {
+                "move_number": 12,
+                "player": "W",
+                "move": "O-O",
+                "commentary": ""
+              },
+              {
+                "move_number": 12,
+                "player": "B",
+                "move": "Nc6",
+                "commentary": ""
+              },
+              {
+                "move_number": 13,
+                "player": "W",
+                "move": "c5",
+                "commentary": ""
+              },
+              {
+                "move_number": 13,
+                "player": "B",
+                "move": "Rxe3",
+                "commentary": "is the famous exchange sacrifice that first occurred in Karpov-Kasparov, New York 1990 (11th game of the world championship match)."
+              }
+            ]
+          },
+          {
+            "id": "gligoric_9_g5",
+            "name": "Alternative 9...g5",
+            "description": "Black plays 9...g5 instead of 9...Nc6",
+            "startingMoveIndex": 3,
+            "moves": [
+              {
+                "move_number": 9,
+                "player": "B",
+                "move": "g5",
+                "commentary": "9...g5 10 Bg3 Nh6 is an interesting alternative after which White usually blocks the centre with 11 d5 or exchanges queens with 11 dxe5 dxe5 12 Qxd8 Rxd8 13 Nd5 Na6 14 O-O-O Be6. The former is the more promising strategy."
+              },
+              {
+                "move_number": 10,
+                "player": "W",
+                "move": "Bg3",
+                "commentary": ""
+              },
+              {
+                "move_number": 10,
+                "player": "B",
+                "move": "Nh6",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "W",
+                "move": "d5",
+                "commentary": ""
+              }
+            ]
+          },
+          {
+            "id": "gligoric_12_c5",
+            "name": "Alternative 12...c5!?",
+            "description": "Black plays 12...c5!? instead of 12...g5",
+            "startingMoveIndex": 9,
+            "moves": [
+              {
+                "move_number": 12,
+                "player": "B",
+                "move": "c5",
+                "commentary": "Black can also slow down White on the queenside. One possible continuation is 13 Rb1 with the idea of b4 while another is to change the character of the game by playing 13 dxc6!? bxc6 14 b4."
+              },
+              {
+                "move_number": 13,
+                "player": "W",
+                "move": "Rb1",
+                "commentary": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -5,7 +5,7 @@
       "id": "game_38_rogers_gallagher_1999",
       "title": "Game 38: Rogers vs. Gallagher (Lugano 1999)",
       "description": "Digitized from PDF pages 101 to 102.",
-      "textContext": "Extracted from Starting Out: The King's Indian. Chapter 5: Sämisch Variation.",
+      "textContext": "Extracted from Starting Out: The King's Indian. Chapter 5: S\u00e4misch Variation.",
       "preparsedJson": {
         "game_id": "game_38",
         "white": "Rogers",
@@ -276,37 +276,37 @@
             {
               "move_number": 33,
               "player": "W",
-              "move": "Bg2",
+              "move": "Qg2",
               "commentary": ""
             },
             {
               "move_number": 33,
               "player": "B",
-              "move": "Be5+",
+              "move": "Rf2",
               "commentary": ""
             },
             {
               "move_number": 34,
               "player": "W",
-              "move": "Kg1",
+              "move": "Kh1",
               "commentary": ""
             },
             {
               "move_number": 34,
               "player": "B",
-              "move": "R7f2",
+              "move": "Rxg2",
               "commentary": ""
             },
             {
               "move_number": 35,
               "player": "W",
-              "move": "Bxf3",
+              "move": "Bxg2",
               "commentary": ""
             },
             {
               "move_number": 35,
               "player": "B",
-              "move": "Bd4+",
+              "move": "Rf3",
               "commentary": "White resigned."
             }
           ]

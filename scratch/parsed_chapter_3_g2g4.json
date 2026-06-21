@@ -1,0 +1,93 @@
+{
+  "book_title": "Starting Out: The King's Indian",
+  "exercises": [
+    {
+      "id": "theory_g2_g4",
+      "title": "Theory: White Blocks the Kingside with g2-g4",
+      "description": "White Blocks the Kingside with g2-g4 (Book Page 48, introduces systems for Game 14 and Game 15).",
+      "imageFilename": "page_48.png",
+      "textContext": "Theory: White Blocks the Kingside with g2-g4",
+      "preparsedJson": {
+        "game_id": "theory_g2_g4",
+        "white": "Theory",
+        "black": "White Blocks the Kingside with g2-g4",
+        "initial_moves": "1 d4 Nf6 2 c4 g6 3 Nc3 Bg7 4 e4 d6 5 Nf3 O-O 6 Be2 e5 7 O-O Nc6 8 d5 Ne7 9 Ne1 Nd7",
+        "interactive_section": {
+          "starting_move": 10,
+          "moves": [
+            {
+              "move_number": 10,
+              "player": "W",
+              "move": "Nd3",
+              "commentary": "We are going to look at two separate systems for White. System 1: 10 Nd3 f5 11 Bd2 Nf6 12 f3 f4 13 g4 is covered in Game 14."
+            },
+            {
+              "move_number": 10,
+              "player": "B",
+              "move": "f5",
+              "commentary": ""
+            },
+            {
+              "move_number": 11,
+              "player": "W",
+              "move": "Bd2",
+              "commentary": ""
+            },
+            {
+              "move_number": 11,
+              "player": "B",
+              "move": "Nf6",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "W",
+              "move": "f3",
+              "commentary": ""
+            },
+            {
+              "move_number": 12,
+              "player": "B",
+              "move": "f4",
+              "commentary": ""
+            },
+            {
+              "move_number": 13,
+              "player": "W",
+              "move": "g4",
+              "commentary": ""
+            }
+          ]
+        },
+        "sidelines": [
+          {
+            "id": "g2_g4_10_f3",
+            "name": "Alternative 10 f3",
+            "description": "White plays 10 f3 instead of 10 Nd3",
+            "startingMoveIndex": -1,
+            "moves": [
+              {
+                "move_number": 10,
+                "player": "W",
+                "move": "f3",
+                "commentary": "System 2: 10 f3 f5 11 g4 (Diagram 7) is covered in Game 15."
+              },
+              {
+                "move_number": 10,
+                "player": "B",
+                "move": "f5",
+                "commentary": ""
+              },
+              {
+                "move_number": 11,
+                "player": "W",
+                "move": "g4",
+                "commentary": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
