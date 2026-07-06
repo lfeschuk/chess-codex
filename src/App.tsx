@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { ChessBoard } from './components/ChessBoard';
 import { SAMPLE_PAGES } from './sampleData';
+import { REASSESS_YOUR_CHESS_BOOK } from './reassessYourChessData';
 import { ParsedChessGame, ChessMove, SidelineVariation, SampleBookPage, ChessBook } from './types';
 import { getOpeningMovesForPage } from './openingExplainer';
 import { LearningSection } from './components/LearningSection';
@@ -71,12 +72,18 @@ export default function App() {
   // Application Data States - Books and Selected Book ID
   const [books, setBooks] = useState<ChessBook[]>(() => {
     const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const defaultBooks = [
+      REASSESS_YOUR_CHESS_BOOK,
+      {
+        id: 'book_1',
+        title: "Joe Gallagher - Starting Out: The King's Indian",
+        exercises: SAMPLE_PAGES
+      }
+    ];
     if (saved) {
       try {
         const parsed = JSON.parse(saved) as ChessBook[];
-        // Auto-migration: If default book_1 exists but is missing the newly added 68 illustrative games,
-        // we upgrade its exercises list automatically so the user gets them instantly.
-        return parsed.map((b) => {
+        let migrated = parsed.map((b) => {
           if (b.id === 'book_1') {
             const hasIllustrativeGames = b.exercises.some((e) => e.id.startsWith('game_') && e.id !== 'game_1_tactical_trap');
             if (!hasIllustrativeGames || b.exercises.length < SAMPLE_PAGES.length) {
@@ -87,23 +94,31 @@ export default function App() {
               };
             }
           }
+          if (b.id === 'book_silman_reassess') {
+            return REASSESS_YOUR_CHESS_BOOK;
+          }
           return b;
         });
+
+        if (!migrated.some(b => b.id === 'book_silman_reassess')) {
+          migrated = [REASSESS_YOUR_CHESS_BOOK, ...migrated];
+        } else {
+          const silmanBook = migrated.find(b => b.id === 'book_silman_reassess')!;
+          const others = migrated.filter(b => b.id !== 'book_silman_reassess');
+          migrated = [silmanBook, ...others];
+        }
+        return migrated;
       } catch (e) {
         console.error("Failed to parse saved books:", e);
       }
     }
-    return [
-      {
-        id: 'book_1',
-        title: "Joe Gallagher - Starting Out: The King's Indian",
-        exercises: SAMPLE_PAGES
-      }
-    ];
+    return defaultBooks;
   });
 
   const [selectedBookId, setSelectedBookId] = useState<string>(() => {
-    return localStorage.getItem('chess_codex_selected_book_id_v2') || 'book_1';
+    const saved = localStorage.getItem('chess_codex_selected_book_id_v3');
+    if (saved) return saved;
+    return 'book_silman_reassess';
   });
 
   // Calculate current book
@@ -113,7 +128,7 @@ export default function App() {
 
   // Selected exercise ID
   const [selectedExerciseId, setSelectedExerciseId] = useState<string>(() => {
-    const savedSelectedBookId = localStorage.getItem('chess_codex_selected_book_id_v2') || 'book_1';
+    const savedSelectedBookId = localStorage.getItem('chess_codex_selected_book_id_v3') || 'book_silman_reassess';
     const initialBook = books.find(b => b.id === savedSelectedBookId) || books[0];
     return initialBook?.exercises[0]?.id || '';
   });
@@ -125,10 +140,10 @@ export default function App() {
   }, [currentBook, selectedExerciseId]);
 
   const [activeGame, setActiveGame] = useState<ParsedChessGame>(() => {
-    const savedSelectedBookId = localStorage.getItem('chess_codex_selected_book_id_v2') || 'book_1';
+    const savedSelectedBookId = localStorage.getItem('chess_codex_selected_book_id_v3') || 'book_silman_reassess';
     const initialBook = books.find(b => b.id === savedSelectedBookId) || books[0];
     const initialExercise = initialBook?.exercises[0] || null;
-    return initialExercise?.preparsedJson || SAMPLE_PAGES[0].preparsedJson;
+    return initialExercise?.preparsedJson || REASSESS_YOUR_CHESS_BOOK.exercises[0].preparsedJson;
   });
 
   const [currentMoveIndex, setCurrentMoveIndex] = useState<number>(-1); // -1 is start position
@@ -236,6 +251,7 @@ Also look for alternative commentary variations in parentheses and extract them 
   }, [books]);
 
   useEffect(() => {
+    localStorage.setItem('chess_codex_selected_book_id_v3', selectedBookId);
     localStorage.setItem('chess_codex_selected_book_id_v2', selectedBookId);
   }, [selectedBookId]);
 
@@ -1113,20 +1129,21 @@ Parse all instructions, chess games, diagrams, commentaries, and sidelines. Refo
 
   const restoreDefaultSampleBook = () => {
     showConfirm(
-      'This will reset "Joe Gallagher - Starting Out: The King\'s Indian" to the official starting playbook with all 68 illustrative games. Your custom changes to this specific book will be reset. Proceed?',
+      'This will reset your library to the official default editions: Jeremy Silman\'s "How to Reassess Your Chess" and Joe Gallagher\'s "The King\'s Indian". Proceed?',
       () => {
         setBooks(prev => {
-          const filtered = prev.filter(b => b.id !== 'book_1');
-          const defaultBook: ChessBook = {
+          const filtered = prev.filter(b => b.id !== 'book_1' && b.id !== 'book_silman_reassess');
+          const defaultBook1: ChessBook = REASSESS_YOUR_CHESS_BOOK;
+          const defaultBook2: ChessBook = {
             id: 'book_1',
             title: "Joe Gallagher - Starting Out: The King's Indian",
             exercises: SAMPLE_PAGES
           };
-          return [defaultBook, ...filtered];
+          return [defaultBook1, defaultBook2, ...filtered];
         });
-        setSelectedBookId('book_1');
-        setSelectedExerciseId(SAMPLE_PAGES[0].id);
-        showAlert("Successfully restored/reset the official volume with all 68 illustrative games!", "success");
+        setSelectedBookId('book_silman_reassess');
+        setSelectedExerciseId(REASSESS_YOUR_CHESS_BOOK.exercises[0].id);
+        showAlert("Successfully restored/reset the official volume editions!", "success");
       }
     );
   };
@@ -1404,7 +1421,7 @@ Parse all instructions, chess games, diagrams, commentaries, and sidelines. Refo
                 <div className="w-full flex justify-center py-4 bg-white/40 border border-black/5 rounded-xl mb-6">
                   <ChessBoard
                     key={`tools_${selectedExerciseId}`}
-                    initialMoves={activeGame.initial_moves || ""}
+                    initialMoves={activeGame.initial_moves?.includes('/') ? activeGame.initial_moves : ""}
                     gameMoves={gameMoves}
                     currentMoveIndex={currentMoveIndex}
                     onMoveSelected={(idx) => {
@@ -1908,7 +1925,7 @@ Black to play and win material.
                           onClick={restoreDefaultSampleBook}
                           className="w-full bg-white/10 hover:bg-white/20 border border-white/10 py-1.5 rounded text-[10px] font-mono text-white text-center cursor-pointer transition-all mt-auto"
                         >
-                          Restore "Modern King's Indian"
+                          Restore Official Volumes (Silman & Gallagher)
                         </button>
                       </div>
                     </div>

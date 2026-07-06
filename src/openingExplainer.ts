@@ -356,7 +356,7 @@ export function getOpeningMovesForPage(page: any): ChessMove[] {
 
   // Generate fallbackMoves list automatically with simple educational boilerplate for any other custom game page!
   const initialMovesStr = page.preparsedJson.initial_moves || '';
-  if (!initialMovesStr) return [];
+  if (!initialMovesStr || initialMovesStr.trim().includes('/')) return [];
 
   const moves = initialMovesStr
     .replace(/\d+\.+/g, '')

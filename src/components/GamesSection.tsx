@@ -212,7 +212,7 @@ export const GamesSection: React.FC<GamesSectionProps> = ({
           <div className="w-full flex justify-center py-4 bg-white/40 border border-black/5 rounded-xl mb-6 shadow-2xs">
             <ChessBoard
               key={`game_${selectedExerciseId}`}
-              initialMoves={activeGame.initial_moves || ""}
+              initialMoves={activeGame.initial_moves?.includes('/') ? activeGame.initial_moves : ""}
               gameMoves={gameMoves}
               currentMoveIndex={currentMoveIndex}
               onMoveSelected={(idx) => {

@@ -605,8 +605,8 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
             {chessInstance.turn() === 'w' ? "White to play" : "Black to play"}
           </span>
           {isCustomPlayMode && (
-            <span className="px-2 py-0.5 text-[9px] bg-[#B91C1C] text-white font-sans uppercase tracking-widest font-bold rounded">
-              Analysis Mode
+            <span className="px-2.5 py-1 text-[10px] bg-red-700 text-white font-sans uppercase tracking-widest font-bold rounded-lg shadow-sm animate-pulse flex items-center gap-1.5">
+              <span>⚡ Manual Secondary Variation</span>
             </span>
           )}
         </div>
@@ -638,6 +638,36 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
       ) : (
         <div className="w-full text-center mt-2.5 py-1.5 bg-stone-55 border border-stone-200/60 rounded-xl text-[10px] font-sans text-stone-400 font-medium select-none">
           Start position. No moves played yet.
+        </div>
+      )}
+
+      {/* Manual Variation Exploration Banner */}
+      {isCustomPlayMode && (
+        <div className="w-full mt-3 p-3 bg-red-950/95 text-white rounded-xl border border-red-500/40 shadow-md text-left transition-all">
+          <div className="flex items-center justify-between gap-2 mb-1.5">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-red-300 font-bold flex items-center gap-1">
+              <span>⚡ MANUAL VARIATION EXPLORATION</span>
+            </span>
+            <span className="text-[9px] font-sans bg-red-900/80 text-red-200 px-2 py-0.5 rounded border border-red-700">
+              {customGameHistory.length} move{customGameHistory.length !== 1 ? 's' : ''} diverged
+            </span>
+          </div>
+          <p className="text-xs font-serif text-stone-200 italic mb-2.5 leading-relaxed">
+            You are manually testing a secondary variation according to the book. Played: <strong className="text-amber-300 font-mono not-italic">{customGameHistory.join(' → ')}</strong>
+          </p>
+          <button
+            onClick={() => {
+              setIsCustomPlayMode(false);
+              const restored = new Chess(activeFEN);
+              setChessInstance(restored);
+              setCustomGameHistory([]);
+              playMoveSound(false);
+            }}
+            className="w-full py-2 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white text-xs font-sans font-bold uppercase tracking-wider rounded-lg shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
+          >
+            <Undo2 size={14} />
+            <span>↩ Reset to Mainline (Where We Stopped)</span>
+          </button>
         </div>
       )}
 
@@ -789,10 +819,10 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
                 setCustomGameHistory([]);
                 playMoveSound(false);
               }}
-              className="flex items-center gap-1.5 px-3 py-1 bg-[#1A1A1A] text-white hover:bg-black rounded-lg text-[9px] font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1 bg-red-700 text-white hover:bg-red-800 rounded-lg text-[9px] font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer animate-pulse"
             >
               <Undo2 size={10} />
-              <span>Reset Branch</span>
+              <span>↩ Reset to Mainline</span>
             </button>
           ) : (
             <span className="text-[9px] font-sans text-stone-500 uppercase tracking-widest font-bold block px-2 py-1 select-none">

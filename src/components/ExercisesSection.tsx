@@ -12,7 +12,9 @@ import {
   BookOpen,
   ChevronRight,
   Eye,
-  EyeOff
+  EyeOff,
+  ArrowLeft,
+  ArrowRight
 } from 'lucide-react';
 import { SampleBookPage, ParsedChessGame, ChessMove, SidelineVariation } from '../types';
 import { ChessBoard } from './ChessBoard';
@@ -89,6 +91,7 @@ export const ExercisesSection: React.FC<ExercisesSectionProps> = ({
   const [hintLevel, setHintLevel] = useState(0); // 0 = none, 1 = source square, 2 = source + dest squares
   const [exerciseMoveScore, setExerciseMoveScore] = useState(0);
   const [showMoveListAnyway, setShowMoveListAnyway] = useState(false); // allows revealing the moves list for review
+  const [showFullText, setShowFullText] = useState(false);
   
   // Library scores states
   const [scores, setScores] = useState<Record<string, ExerciseScore>>(() => {
@@ -100,6 +103,10 @@ export const ExercisesSection: React.FC<ExercisesSectionProps> = ({
   const exercises = useMemo(() => {
     return currentBook.exercises.filter(ex => !ex.id.startsWith('game_') || ex.id === 'game_1_tactical_trap');
   }, [currentBook.exercises]);
+
+  const currentIndex = currentBook.exercises.findIndex(e => e.id === selectedExerciseId);
+  const prevExercise = currentIndex > 0 ? currentBook.exercises[currentIndex - 1] : null;
+  const nextExercise = currentIndex >= 0 && currentIndex < currentBook.exercises.length - 1 ? currentBook.exercises[currentIndex + 1] : null;
 
   // Sync scores to localstorage
   useEffect(() => {
@@ -332,11 +339,33 @@ export const ExercisesSection: React.FC<ExercisesSectionProps> = ({
             </div>
           </div>
 
+          {/* Full Book Chapter Passage Toggle & Reader (100% Text Display) */}
+          <div className="mb-6">
+            <button
+              onClick={() => setShowFullText(!showFullText)}
+              className="w-full flex items-center justify-between px-4 py-2.5 bg-amber-900/10 hover:bg-amber-900/15 border border-amber-900/20 rounded-xl text-xs font-serif font-bold text-amber-950 transition-all cursor-pointer shadow-2xs"
+            >
+              <span className="flex items-center gap-2">
+                <BookOpen size={14} className="text-[#D97706]" />
+                <span>📖 100% Book Chapter Passage & Text</span>
+              </span>
+              <span className="text-[10px] font-sans font-bold uppercase tracking-wider bg-white px-2 py-0.5 rounded border border-amber-900/10">
+                {showFullText ? 'Hide Passage ▲' : 'Read Full Passage ▼'}
+              </span>
+            </button>
+
+            {showFullText && (
+              <div className="mt-2 p-5 bg-[#FAF4EB] border border-amber-900/20 rounded-xl font-serif text-sm text-stone-850 leading-relaxed max-h-[380px] overflow-y-auto shadow-inner whitespace-pre-wrap">
+                {activeExercise?.textContext || "No chapter passage available for this section."}
+              </div>
+            )}
+          </div>
+
           {/* Chessboard Component Wrapper */}
           <div className="w-full flex justify-center py-4 bg-white/40 border border-black/5 rounded-xl mb-6 shadow-2xs">
             <ChessBoard
               key={`quiz_${selectedExerciseId}_${activeSideline?.id || ''}_${hintLevel}`}
-              initialMoves={activeSideline ? getSidelinePrefixInitialMoves(activeSideline) : (solitaireStartFrom === 'puzzle' ? activeGame.initial_moves : "")}
+              initialMoves={activeSideline ? getSidelinePrefixInitialMoves(activeSideline) : ((solitaireStartFrom === 'puzzle' || activeGame.initial_moves?.includes('/')) ? activeGame.initial_moves : "")}
               gameMoves={activeSideline ? activeSideline.moves : gameMoves}
               currentMoveIndex={activeSideline ? activeSidelineMoveIndex : currentMoveIndex}
               solitaireFrontierIndex={solitaireFrontierIndex}
@@ -395,11 +424,77 @@ export const ExercisesSection: React.FC<ExercisesSectionProps> = ({
               <span>Next play: {expectedMove ? `${expectedMove.move_number}.${expectedMove.player === 'W' ? 'White' : 'Black'}` : 'Exercise Complete'}</span>
             </div>
           </div>
+
+          {/* Section / Page Navigation Bar */}
+          <div className="flex items-center justify-between gap-3 pt-4 border-t border-black/10 mt-6 font-sans">
+            <button
+              onClick={() => prevExercise && setSelectedExerciseId(prevExercise.id)}
+              disabled={!prevExercise}
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 bg-stone-100 hover:bg-amber-100 disabled:opacity-40 disabled:hover:bg-stone-100 border border-stone-300/80 rounded-xl text-xs font-bold text-stone-800 transition-all cursor-pointer shadow-2xs truncate"
+              title={prevExercise ? `Go to: ${prevExercise.title}` : "First section of volume"}
+            >
+              <ArrowLeft size={14} className="shrink-0 text-amber-900" />
+              <span className="truncate">{prevExercise ? `⬅️ Prev: ${prevExercise.title}` : 'First Section'}</span>
+            </button>
+
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-stone-500 bg-white px-2.5 py-1 rounded-lg border border-stone-200 shrink-0">
+              Section {currentIndex + 1} of {currentBook.exercises.length}
+            </span>
+
+            <button
+              onClick={() => nextExercise && setSelectedExerciseId(nextExercise.id)}
+              disabled={!nextExercise}
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 bg-amber-900 hover:bg-amber-950 disabled:opacity-40 disabled:hover:bg-amber-900 text-white border border-amber-950 rounded-xl text-xs font-bold transition-all cursor-pointer shadow-sm truncate"
+              title={nextExercise ? `Go to: ${nextExercise.title}` : "Last section of volume"}
+            >
+              <span className="truncate">{nextExercise ? `Next: ${nextExercise.title} ➡️` : 'Last Section'}</span>
+              <ArrowRight size={14} className="shrink-0 text-amber-200" />
+            </button>
+          </div>
         </div>
       </div>
 
       {/* RIGHT COLUMN: Exercises grid & Progress Stats */}
       <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+        {/* Silman Imbalance Masterclass Hero Dashboard */}
+        {activeExercise?.id.startsWith('silman_intro') && (
+          <div className="bg-gradient-to-br from-stone-900 via-amber-950 to-stone-900 text-white border border-amber-500/30 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+            <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1">
+              ✨ SILMAN'S MASTER CLASS
+            </span>
+            <h3 className="text-2xl font-serif font-light tracking-tight text-white mb-2">
+              The 7 Imbalances Roadmap
+            </h3>
+            <p className="text-xs font-serif text-stone-300 italic mb-4 leading-relaxed">
+              "If you want to be successful, you have to base your moves and plans on the specific imbalance-oriented criteria that exist in the given position, not on your mood, tastes, and/or fears!" — Jeremy Silman
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {[
+                { id: 'silman_diag_1', name: '♗ Superior Minor Piece', desc: 'Active vs Inactive' },
+                { id: 'silman_diag_3', name: '♟ Pawn Structure', desc: 'Passed & Weak Pawns' },
+                { id: 'silman_diag_5', name: '🗺️ Space Advantage', desc: 'Territorial Annexation' },
+                { id: 'silman_diag_6', name: '👑 Material', desc: 'Philosophy of Greed' },
+                { id: 'silman_diag_7', name: '🛣️ Key File Control', desc: 'Roads for Rooks' },
+                { id: 'silman_diag_8', name: '🕳️ Weak Squares', desc: 'Homes for Horses' },
+                { id: 'silman_diag_9', name: '⚡ Development & Initiative', desc: 'Pushing Your Agenda' },
+                { id: 'silman_diag_11', name: '🎯 King Safety', desc: 'Dragging Down Monarchs' },
+                { id: 'silman_diag_12', name: '⚖️ Statics vs Dynamics', desc: 'Long vs Short Term' },
+              ].map((imb) => (
+                <button
+                  key={imb.id}
+                  onClick={() => setSelectedExerciseId(imb.id)}
+                  className="p-2.5 bg-white/5 hover:bg-amber-500/20 border border-white/10 hover:border-amber-500/50 rounded-xl text-left transition-all group cursor-pointer"
+                >
+                  <span className="text-xs font-serif font-bold text-amber-300 group-hover:text-white block truncate">{imb.name}</span>
+                  <span className="text-[9px] font-sans text-stone-400 group-hover:text-amber-200 block truncate">{imb.desc}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Solve Tracker & Progress Stats */}
         <div className="bg-[#141414] text-white border border-white/5 rounded-2xl p-6 shadow-md">
           <span className="text-[10px] font-mono uppercase tracking-widest opacity-40 block mb-2">
