@@ -77,7 +77,7 @@ export const REASSESS_YOUR_CHESS_BOOK: ChessBook = {
             "white": "Active Bishop",
             "black": "Slacker Knight",
             "event": "Diagram 1, Page 16",
-            "initial_moves": "3r1rk1/p1n1qppp/1p2p3/3pP3/3P1P2/3B4/PP4PP/R2Q1RK1 w - - 0 1",
+            "initial_moves": "3r1rk1/p1n1qppp/1p2p3/3PP3/3D1P2/8/PP4PP/R2Q1RK1 w - - 0 1",
             "interactive_section": {
                 "starting_move": 1,
                 "moves": [
@@ -138,36 +138,24 @@ export const REASSESS_YOUR_CHESS_BOOK: ChessBook = {
             "white": "Ruler Knight",
             "black": "Caged Bishop",
             "event": "Diagram 2, Page 16",
-            "initial_moves": "4rrk1/p1pqb1pp/1p1p1p2/3PpP2/2P1N1P1/8/PP1Q3P/R4RK1 w - - 0 1",
+            "initial_moves": "4r1k1/p1pqb1rp/1p1pNp2/3PpP2/2P3P1/8/PP1Q3P/R4RK1 w - - 0 1",
             "interactive_section": {
                 "starting_move": 1,
                 "moves": [
                     {
                         "move_number": 1,
                         "player": "W",
-                        "move": "Ne6",
-                        "commentary": "The Knight leaps into the magnificent hole on e6! From this outpost, it dominates the entire board, while Black's bishop on e7 is blocked by its own pawns on d6, e5, and f6."
+                        "move": "Rab1",
+                        "commentary": "White prepares to open a second front on the queenside, preparing b2-b4!"
                     },
                     {
                         "move_number": 1,
                         "player": "B",
-                        "move": "Rf7",
-                        "commentary": "Black steps aside with the rook, defending the 7th rank helplessly."
-                    },
-                    {
-                        "move_number": 2,
-                        "player": "W",
-                        "move": "Rab1",
-                        "commentary": "With the center and kingside locked down by the e6 knight, White calmly opens a second front on the queenside, preparing b2-b4 and c4-c5 or Rb3-b7!"
-                    },
-                    {
-                        "move_number": 2,
-                        "player": "B",
                         "move": "Bd8",
-                        "commentary": "The caged bishop tries to shuffle back, but has no scope whatsoever."
+                        "commentary": "Black retreats the bishop, completely passive."
                     },
                     {
-                        "move_number": 3,
+                        "move_number": 2,
                         "player": "W",
                         "move": "b4",
                         "commentary": "White expands on the queenside. Complete territorial annexation!"
@@ -187,7 +175,7 @@ export const REASSESS_YOUR_CHESS_BOOK: ChessBook = {
             "white": "Advanced Passer",
             "black": "Two Passers",
             "event": "Diagram 3, Page 16",
-            "initial_moves": "r4rk1/B3qp1p/Pp4p1/4p3/3p4/2p2Q2/5PPP/2R3K1 w - - 0 1",
+            "initial_moves": "r4rk1/B3qp1p/pP4p1/4p3/3p4/2p2Q2/5PPP/2R3K1 w - - 0 1",
             "interactive_section": {
                 "starting_move": 1,
                 "moves": [
@@ -342,7 +330,7 @@ export const REASSESS_YOUR_CHESS_BOOK: ChessBook = {
             "white": "Team Assault",
             "black": "Isolated e6",
             "event": "Diagram 4, Page 17",
-            "initial_moves": "6k1/pp3p1p/2nbp1p1/8/5P2/4R1P1/PP2Q1BP/4R1K1 w - - 0 1",
+            "initial_moves": "2q1r1k1/1p2r2p/p1nbp1p1/2p5/2P1RP2/1P3NP1/P3R1BP/4Q1K1 w - - 0 1",
             "interactive_section": {
                 "starting_move": 1,
                 "moves": [
@@ -403,7 +391,7 @@ export const REASSESS_YOUR_CHESS_BOOK: ChessBook = {
             "white": "Space Dominator",
             "black": "Cramped Box",
             "event": "Diagram 5, Page 17",
-            "initial_moves": "2r1r1k1/1p1q1pbp/p2pb1p1/3Np1P1/2P1P2P/1P1B1Q2/P4P2/2R2RK1 w - - 0 1",
+            "initial_moves": "r2qbrk1/pppnbnp1/3p1p1p/P2PpP2/1PP1P1PP/1N1BBN2/1K1Q1R2/2R5 w - - 0 1",
             "interactive_section": {
                 "starting_move": 1,
                 "moves": [
@@ -452,7 +440,7 @@ export const REASSESS_YOUR_CHESS_BOOK: ChessBook = {
             "white": "Inner Greed",
             "black": "Active Hope",
             "event": "Diagram 6, Page 18",
-            "initial_moves": "r4rk1/ppp1qppp/3p4/4n3/2P5/1Q3B2/PP3PPP/3R1RK1 w - - 0 1",
+            "initial_moves": "3r1rk1/pppq2bp/3p2p1/5b2/8/2P5/PP2QPBP/2BRR1K1 w - - 0 1",
             "interactive_section": {
                 "starting_move": 1,
                 "moves": [
@@ -535,7 +523,7 @@ export const REASSESS_YOUR_CHESS_BOOK: ChessBook = {
             "white": "File Master",
             "black": "Passive Wait",
             "event": "Diagram 7, Page 19",
-            "initial_moves": "3r2k1/ppp2ppp/3q4/3P4/2P5/6Q1/PP4PP/4RRK1 w - - 0 1",
+            "initial_moves": "2qr1rk1/p1p2ppp/1p1p1b2/1P6/P1PP4/3Q2P1/4RPBK/4R1K1 w - - 0 1",
             "interactive_section": {
                 "starting_move": 1,
                 "moves": [
@@ -716,7 +704,7 @@ export const REASSESS_YOUR_CHESS_BOOK: ChessBook = {
             "white": "Agenda Pusher",
             "black": "Active Counter",
             "event": "Diagram 10, Page 21",
-            "initial_moves": "3rr1k1/1p1q1pp1/p1nb3p/2p1p3/2N1P2N/2P1B1P1/PP3PBP/3RR1K1 b - - 0 1",
+            "initial_moves": "3r1rk1/1ppnq1p1/2n1bp1p/p1b1p3/2N1P2N/2P1E1P1/PP2QPBP/3R1RK1 b - - 0 1",
             "interactive_section": {
                 "starting_move": 1,
                 "moves": [
@@ -819,7 +807,7 @@ export const REASSESS_YOUR_CHESS_BOOK: ChessBook = {
             "white": "Safe King Lead",
             "black": "Central Monarch",
             "event": "Diagram 11, Page 22",
-            "initial_moves": "r1bqk2r/pp1n1ppp/2n1p3/3pP3/3P4/3B1N2/PP1Q1PPP/R4RK1 w kq - 0 1",
+            "initial_moves": "r1bqk2r/pp1nbppp/2p1pn2/4N3/2B5/2N5/PPP1QPPP/R1B2RK1 w kq - 0 1",
             "interactive_section": {
                 "starting_move": 1,
                 "moves": [
